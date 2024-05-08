@@ -40,6 +40,9 @@ const initialDistanceInMeters = initialDistance.value * 1000;
 const newDistanceInMeters = initialDistanceInMeters + (velocityInMetersPerSecond * duration.value);
 const newDistanceInKilometers = newDistanceInMeters / 1000;
 
+// Calculate remaining fuel
+const remainingFuelInKilograms = fuelAmount.value - (fuelBurnRate.value * duration.value);
+
 const d2 = d + (vel*time) //calcultes new distance
 const rf = fbr*time //calculates remaining fuel
 const vel2 = calcNewVel(acc, vel, time) //calculates new velocity based on acceleration
