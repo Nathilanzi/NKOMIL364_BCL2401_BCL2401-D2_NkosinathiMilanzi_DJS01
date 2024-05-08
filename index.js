@@ -36,6 +36,9 @@ if (velocity.unit !== 'km/h' || acceleration.unit !== 'm/s^2' || duration.unit !
 const velocityInMetersPerSecond = velocity.value / 3.6;
 const initialDistanceInMeters = initialDistance.value * 1000;
 
+// Calculate new distance
+const newDistanceInMeters = initialDistanceInMeters + (velocityInMetersPerSecond * duration.value);
+const newDistanceInKilometers = newDistanceInMeters / 1000;
 
 const d2 = d + (vel*time) //calcultes new distance
 const rf = fbr*time //calculates remaining fuel
